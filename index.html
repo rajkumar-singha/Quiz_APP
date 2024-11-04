@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div id="quizContainer" class="bg-white w-96 border border-gray-300 shadow-lg p-6 rounded-lg">
+        <div class="bg-gray-800 text-white text-center py-2 rounded-t-lg">
+            <h2 class="text-xl font-semibold">Quiz App</h2>
+            <div class="flex justify-between px-4 mt-2">
+                <span>Question <span id="questionNumber">1</span>/<span id="totalQuestionNumber">0</span></span>
+                <span>Score: <span id="score">0</span></span>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <p id="questionText" class="text-lg font-semibold">Question text goes here</p>
+            <div id="options" class="mt-4 space-y-3">
+                <!-- Options will be generated here -->
+            </div>
+            <button onclick="nextQuestion()" id="nextButton" class="bg-gray-800 text-white py-2 px-4 mt-6 w-full rounded-lg">Next</button>
+        </div>
+    </div>
+
+    <div id="resultContainer" class="hidden bg-white w-96 border border-gray-300 shadow-lg p-6 rounded-lg text-center">
+        <h2 class="text-2xl font-semibold">Quiz Completed!</h2>
+        <p class="text-lg mt-4">Your final score is: <span id="finalScore">0</span></p>
+        <button onclick="restartQuiz()" class="bg-gray-800 text-white py-2 px-4 mt-6 w-full rounded-lg">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
